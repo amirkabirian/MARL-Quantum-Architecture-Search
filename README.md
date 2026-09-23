@@ -9,7 +9,7 @@
 
 In the Noisy Intermediate-Scale Quantum (NISQ) era, quantum hardware is severely constrained by short decoherence times ($T_1, T_2$) and high two-qubit gate error rates ($10^{-3}$ to $10^{-2}$). As quantum circuits grow in depth, accumulated gate noise rapidly diminishes execution fidelity, rendering computational outputs indistinguishable from random physical noise.
 
-Standard quantum transpilers rely heavily on heuristic pass managers or evolutionary search algorithms. While effective for basic layouts, these traditional techniques fail to navigate the combinatorial explosion of non-local gate equivalences in large-scale Ansätze. 
+Standard quantum transpilers rely heavily on heuristic pass managers or evolutionary search algorithms. While effective for basic layouts, these traditional techniques fail to navigate the combinatorial explosion of non-local gate equivalences in large-scale Ansätze.
 
 **MARL-Quantum-Architecture-Search (MARL-QAS)** addresses this core bottleneck by framing Quantum Architecture Search (QAS) and circuit transpilation as a Multi-Agent Reinforcement Learning problem. By training cooperative sub-agents in PyTorch over custom Gymnasium quantum environments, the framework autonomously discovers optimal gate compression paths, reducing CNOT counts and overall circuit depth while preserving strict process fidelity.
 
