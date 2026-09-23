@@ -1,11 +1,9 @@
 # MARL-Quantum-Architecture-Search
 
-<p align="left">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/>
-  <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python 3.10+"/>
-  <img src="https://img.shields.io/badge/Qiskit-1.0+-purple.svg" alt="Qiskit 1.0+"/>
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch"/>
-</p>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Qiskit 1.0+](https://img.shields.io/badge/Qiskit-1.0+-purple.svg)](https://qiskit.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 
 ## Executive Summary & Scientific Motivation
 
@@ -14,6 +12,24 @@ In the Noisy Intermediate-Scale Quantum (NISQ) era, quantum hardware is severely
 Standard quantum transpilers rely heavily on heuristic pass managers or evolutionary search algorithms. While effective for basic layouts, these traditional techniques fail to navigate the combinatorial explosion of non-local gate equivalences in large-scale Ansätze.
 
 **MARL-Quantum-Architecture-Search (MARL-QAS)** addresses this core bottleneck by framing Quantum Architecture Search (QAS) and circuit transpilation as a Multi-Agent Reinforcement Learning problem. By training cooperative sub-agents in PyTorch over custom Gymnasium quantum environments, the framework autonomously discovers optimal gate compression paths, reducing CNOT counts and overall circuit depth while preserving strict process fidelity.
+
+---
+
+## 📌 Interactive Notebooks (Run in Google Colab)
+
+You can execute the complete pipeline sequentially directly in Google Colab:
+
+* **01_quantum_circuit_environment.ipynb**  
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/amirkabirian/MARL-Quantum-Architecture-Search/blob/main/notebooks/01_quantum_circuit_environment.ipynb)  
+  *Defines the quantum circuit Gymnasium environment, unitary matrices, and action spaces.*
+
+* **02_marl_agent_training.ipynb**  
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/amirkabirian/MARL-Quantum-Architecture-Search/blob/main/notebooks/02_marl_agent_training.ipynb)  
+  *Trains the PyTorch Multi-Agent Actor-Critic architecture for multi-qubit gate optimization.*
+
+* **03_qas_benchmark_demo.ipynb**  
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/amirkabirian/MARL-Quantum-Architecture-Search/blob/main/notebooks/03_qas_benchmark_demo.ipynb)  
+  *Benchmarks MARL-QAS against standard Qiskit transpilation passes and generates plots.*
 
 ---
 
